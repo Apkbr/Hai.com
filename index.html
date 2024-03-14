@@ -13,12 +13,13 @@
   }
   #video-background {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
+    transform: translate(-50%, -50%);
     z-index: -1000;
     overflow: hidden;
   }
@@ -39,7 +40,7 @@
   Your browser does not support the video tag.
 </video>
 <div id="video-content">
- rockstar games🎮
+  <!-- Konten tambahan di sini -->
 </div>
 <script>
   var video = document.getElementById("video-background");
