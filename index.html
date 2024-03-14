@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Video</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+    }
+    #content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+<video id="background-video" autoplay loop>
+    <source src="WrasseStar.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div id="content">
+    <h1></h1>
+    <p></p>
+</div>
+
+<script>
+    const video = document.getElementById('background-video');
+    video.addEventListener('ended', function() {
+        window.location.href = 'your-link-url.html';
+    });
+</script>
+
+</body>
+</html>
